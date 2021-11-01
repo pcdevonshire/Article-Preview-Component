@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="hsl(245, 75%, 52%)">
+    <meta name="description" content="Article Preview Component">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>Article Preview Component</title>
+  </head>
+<body>
+  
+  <div class="card">
+    <img src="images/drawers.jpg" alt="drawers">
+    <div class="text">
+      <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+      <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.</p>
+      <div class="profile">
+        <img src="images/avatar-michelle.jpg" alt="michelle">
+        <div class="name">
+          <h2>Michelle Appleton</h2>
+          <p>28 Jun 2020</p>
+        </div>
+        <img src="images/icon-share.svg" alt="share button" id="share">
+      </div>
+    </div>
+    <div id="info">
+      <span>SHARE</span>
+      <div class="icons">
+        <img src="images/icon-facebook.svg" alt="facebook logo">
+        <img src="images/icon-twitter.svg" alt="twitter logo">
+        <img src="images/icon-pinterest.svg" alt="pinterest logo">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var info = document.getElementById("info");
+    var share = document.getElementById("share");
+
+    share.addEventListener("click", open);
+
+    function open() {
+        if (info.style.display === "flex") {
+            info.style.display = "none";
+            share.style.cssText = "background-color: var(--background)";
+        } else {
+            info.style.display = "flex";
+            share.style.cssText = "background-color: var(--darkGray)";
+        }
+      }
+
+  </script>
+
+</body>
+</html>
